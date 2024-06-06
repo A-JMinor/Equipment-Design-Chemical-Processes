@@ -1,6 +1,7 @@
 This repository hosts a collection of Python functions tailored for designing and analyzing shell and tube heat exchangers and other related equipment in chemical processing. These functions simplify complex engineering calculations necessary for determining structural and operational specifications, such as tube count, shell diameter, baffle arrangement, and equipment weight.
 
 **Features**
+
 *Estimate Tube Number*
 Calculates the required number of tubes to achieve a specific heat transfer area, taking into account the tube diameter and length.
 
