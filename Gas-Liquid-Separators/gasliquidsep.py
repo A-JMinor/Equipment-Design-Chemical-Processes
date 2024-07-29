@@ -8,7 +8,7 @@ Created on Mon Jul 29 2024
 import math
 
 
-def gas_liquid_separator_sizing(rho_vapor, rho_liquid, gas_flowrate, liquid_flowrate, viscosity_gas, h_d_ratio=3, D_sphere=0.0001):
+def gas_liquid_separator_sizing(rho_vapor, rho_liquid, gas_flowrate, liquid_flowrate, viscosity_gas, h_d_ratio=3, D_sphere=0.0001, liquid_fill = 0.65):
     """
     Calculate the key properties of a gas-liquid separator, including the diameter and volume of the vessel,
     the hold-up time of the liquid within the vessel, and the gas velocity through the vessel. The calculations
@@ -72,8 +72,8 @@ def gas_liquid_separator_sizing(rho_vapor, rho_liquid, gas_flowrate, liquid_flow
     # Calculate the volume of the vessel
     D_volume = math.pi / 4 * D_vessel**2 * D_length
 
-    # Calculate the hold-up time based on the volume of the reactor occupied by liquid (assuming 10% liquid volume)
-    hold_up_time = (math.pi * (0.1 * D_length) * D_vessel**2 ) / (4 * liquid_flowrate) / 3600  # converted to hours
+    # Calculate the hold-up time based on the volume of the reactor occupied by liquid (assuming 65% liquid volume)
+    hold_up_time = (math.pi * (liquid_fill * D_length) * D_vessel**2 ) / (4 * liquid_flowrate) / 3600  # converted to hours
 
     return D_vessel, D_volume, hold_up_time, gas_velocity
 
