@@ -2,6 +2,7 @@
 Calculate the key properties of a gas-liquid separator, including the diameter and volume of the vessel, the hold-up time of the liquid within the vessel, and the gas velocity through the vessel. The calculations are based on ensuring effective phase separation under given flow conditions and physical properties of the involved fluids.
 
 Theory and Calculations:
+
     1. Terminal Velocity: The terminal velocity of droplets is crucial to ensure that the droplet can settle
        and be separated from the gas phase. It is calculated based on the modified Stokes' law which considers
        the effect of droplet diameter, and density differences between phases, under the influence of gravity.
